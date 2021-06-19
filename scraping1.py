@@ -15,9 +15,8 @@ url = "https://www.tripadvisor.com/Hotels-g294230-Yogyakarta_Region_Java-Hotels.
 req = requests.get(url)
 soup = BeautifulSoup(req.text, "html.parser")
 
-daftar = soup.findAll("div", "ui_column is-8 main_col allowEllipsis")
-
-for item in daftar:
-    nama = item.find("a", "property_title prominent").text
-    harga = item.find("div", {"data-sizegroup": "mini-meta-price"}).text
-    print(f"{nama}, {harga}")
+for item in soup.findAll("div", "ui_column is-8 main_col allowEllipsis"):
+    nama = item.find("a", "property_title prominent").text.replace("@", "")
+    harga = item.find(
+        "div", {"data-sizegroup": "mini-meta-price"}).text.replace("IDR", "Rp").replace(",", ".")
+    print(f"{nama}, {harga}\n")
