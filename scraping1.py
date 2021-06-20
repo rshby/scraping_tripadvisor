@@ -23,7 +23,6 @@ for item in soup.findAll("div", "ui_column is-8 main_col allowEllipsis"):
         "div", {"data-sizegroup": "mini-meta-price"}).text.replace("IDR", "").replace(",", "")
     jumlah_review = item.find("a", "review_count").text.replace(
         "reviews", "").replace("review", "")
-    #print(f"Nama Hotel: {nama}\nHarga: {harga}\nReview: {jumlah_review}\n")
     data_hotel.append([nama, harga, jumlah_review])
     print(f"Harga: {harga}\n")
 
