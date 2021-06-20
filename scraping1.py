@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 16 18:34:15 2021
-
-@author: ROG
-"""
-
-
 import requests
 from bs4 import BeautifulSoup
 import csv
