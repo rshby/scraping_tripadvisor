@@ -1,0 +1,10 @@
+API Twitter
+API KEY : CvqQayDOgXrYhscT4VwcrQd2l
+API Secrey Key : PKLBaNA7hbr4D21fPDY1ictxkmFfFWWUAyTemYxpN48lG90tIe
+
+Bearer Token : AAAAAAAAAAAAAAAAAAAAALroOQEAAAAAN%2Bb9jtIqVCnLQC8dsjS3M6JQ0Zc%3DZ1sNVHjnK8zb1DhwDurM8ZXrWNkMqkw7A4ngvmqQoAovBbBKtG
+
+Access Token : 538784946-mIHrfx9WOtLtTu2Ckp2WmgoBHxcrISOgHcfOHCve
+Access Secret Token : 1mqLBMnByoIrBqNzWpSmpfZPstgAdfxHi3iHyao4Ovp12
+
+["text", "created_at", "tweet_id", "username", "user_screen_name", "user_id", "user_location", "user_url", "user_desc", "user_verified", "user_followers_count", "user_friend_counts", "user_favourites_count", "user_statuses_count", "user_listed_count", "user_created_at", "user_profile_image_url", "user_default_profile", "user_default_profile_image"]
