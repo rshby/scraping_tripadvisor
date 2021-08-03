@@ -7,7 +7,7 @@ data_pegi = []  # buat variabel untuk menampung data hasil scraping
 
 # karena hotel di jogja pada halaman pegi-pegi ada 39 pages
 # maka buat perulangan untuk scraping pages 1 sampai pages 39
-for i in range(1, 2):
+for i in range(1, 39):
     url = "https://www.pegipegi.com/hotel/jogja/" + \
         str(i)+".html"  # url masing-masing pages
     req = requests.get(url)
@@ -45,18 +45,13 @@ for i in range(1, 2):
             tersedia_kamar += int(kmr_tsd)
         # masukkan data hasil scraping ke variabel data_pegi
         total_kamar = jumlh_kamar+tersedia_kamar
-        print(
-            f"nama hotel : {nama_hotel}\njenis kamar : {jumlh_kamar}\nkamar tersedia : {tersedia_kamar}\ntotal tersedia : {total_kamar}\n")
-        # data_pegi.append([nama_hotel, alamat, jumlh_kamar])
+        data_pegi.append([nama_hotel, alamat, jumlh_kamar, total_kamar])
 
-"""
 # siapkan nama kolom untuk data csv
-kolom = ["nama_hotel", "alamat_hotel", "jumlah_kamar"]
-writer = csv.writer(open("hotel_pegi.csv", "w", newline="")
+kolom = ["nama_hotel", "alamat_hotel", "jenis_kamar", "total_kamar_tersedia"]
+writer = csv.writer(open("hotel_pegi_2.csv", "w", newline="")
                     )  # buat file csv dan nama file
 writer.writerow(kolom)
 
 for d in data_pegi:
     writer.writerow(d)  # masukkan data ke file csv yang sudah dibuat
-"""
-print(data_pegi)
